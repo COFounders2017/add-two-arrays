@@ -1,0 +1,110 @@
+package table3;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Table3 
+{
+    public static void main(String[] args) 
+    {
+         int n,m,i,j,v=1,z=1,d=1;
+         String y="yes";
+         Scanner in = new Scanner(System.in);
+  do
+{ 
+    do{
+         System.out.print("Enter the number of rows of matrix:    ");
+         while(!in.hasNextDouble())
+        {
+              System.out.print("Error characters and symbols are not allowed."
+              +"Enter the number of rows of matrix:    ");
+              in.next();
+        }
+         n  = in.nextInt();
+         if(n<=0)
+           System.out.print("error ");
+         else
+             z=0;
+    }while(z==1);
+    do
+    {
+         System.out.print("Enter the number of columns of matrix:     ");
+        while(!in.hasNextDouble())
+        {
+         System.out.print("Error characters and symbols are not allowed."
+          +"Enter the number of columns of matrix:     ");
+         in.next();
+        }
+         m = in.nextInt();
+        if(m<=0)
+         System.out.print("error ");
+         else
+             d=0;
+    }while(d==1);
+         System.out.println("---------------------------------------------------------");
+         double a[][] = new double[n][m];
+         double b[][] = new double[n][m];
+         double sum[][] = new double[n][m];
+         for (i = 0; i < n; i++)
+        {
+             for (j = 0; j < m; j++)
+            {
+                 System.out.print("Enter the elements of "
+                 + ""+"a"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :  ");
+                 while(!in.hasNextDouble())
+                {
+                System.out.print("Error characters and symbols are not allowed."
+                + "Enter the elements of "+"a"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :    ");
+                     in.next();
+                }
+                     a[i][j] = in.nextDouble();
+            }
+        }
+              System.out.println("---------------------------------------------------------");
+          for (i = 0; i < n; i++)
+        {
+                 for (j = 0; j < m; j++)
+            {
+                 System.out.print("Enter the elements of "+"b"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :  ");
+                 while(!in.hasNextDouble())
+                {
+                  System.out.print("Error characters and symbols are not allowed.Enter the elements of "+"b"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :   ");
+                      in.next();
+                }
+                  b[i][j] = in.nextDouble();
+                 sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+System.out.print("\n the first array \n"+" "+Arrays.deepToString(a).replace("]", "\n").replace("[", "").replace(",", "")
++"the second array \n"+" " +Arrays.deepToString(b).replace("]", "\n").replace("[", "").replace(",", "")
++"the sum \n"+" "+Arrays.deepToString(sum).replace("]", "\n").replace("[", "").replace(",", ""));
+    /*    System.out.print("\n the first array \n"+" "
+        +Arrays.deepToString(a).replace("]", "\n").replace("[", "").replace(",", ""));
+        System.out.print("the scend array \n"+" "
+        +Arrays.deepToString(b).replace("]", "\n").replace("[", "").replace(",", ""));
+        System.out.print("the sum \n"+" "
+        +Arrays.deepToString(sum).replace("]", "\n").replace("[", "").replace(",", ""));*/
+        System.out.println("\n* TO another process press any letter "
+               + "\n* TO EXIT press nO ");
+    while(v==1)
+    {
+           String x;
+                  while(!in.hasNext())
+                  {
+                      System.out.println("Error! ,numbers are not allowed  "
+                       + "\n* TO another process press any letter \n* TO EXIT write no");
+                      in.next();
+                  }
+                    x=in.next();
+                  if("no".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                      v=0;
+                  }
+                  else
+                  {
+                      y="yes";
+                         break;
+                  } 
+    }
+  }while("yes".equalsIgnoreCase(y));             
+}    
+}
