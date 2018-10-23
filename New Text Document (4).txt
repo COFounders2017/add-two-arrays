@@ -76,12 +76,7 @@ public class Table3
 System.out.print("\n the first array \n"+" "+Arrays.deepToString(a).replace("]", "\n").replace("[", "").replace(",", "")
 +"the second array \n"+" " +Arrays.deepToString(b).replace("]", "\n").replace("[", "").replace(",", "")
 +"the sum \n"+" "+Arrays.deepToString(sum).replace("]", "\n").replace("[", "").replace(",", ""));
-    /*    System.out.print("\n the first array \n"+" "
-        +Arrays.deepToString(a).replace("]", "\n").replace("[", "").replace(",", ""));
-        System.out.print("the scend array \n"+" "
-        +Arrays.deepToString(b).replace("]", "\n").replace("[", "").replace(",", ""));
-        System.out.print("the sum \n"+" "
-        +Arrays.deepToString(sum).replace("]", "\n").replace("[", "").replace(",", ""));*/
+      System.out.println("---------------------------------------------------------");
         System.out.println("\n* TO another process press any letter "
                + "\n* TO EXIT press nO ");
     while(v==1)
