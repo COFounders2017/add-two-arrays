@@ -1,0 +1,347 @@
+//program 2                                  »—‰«„Ã ·Õ”«» „”«ÕÂ Ê„ÕÌÿ ÊÕÃÊ„ «·«‘ﬂ«· 
+package p6;
+
+import java.util.Scanner;
+
+public class P6 {
+
+    public static void main(String[] args)
+   {
+       int shape,v=1,i=1;
+     Scanner scan = new Scanner (System.in);
+    do
+    {    
+       System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose  ");
+       System.out.println("1- triangle ");
+       System.out.println("2-square");
+       System.out.println("3-circle");
+       System.out.println("4-cube");
+       System.out.println("5-cuboid");
+       System.out.println("6-ball");
+       System.out.print ("Please enter the number of which shape you want: ");
+       while(!scan.hasNextDouble())
+       {
+           System.out.println("Oops error! characters and symbols are not allowed.");
+           System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose 1 to 6   ");
+           System.out.println("1- triangle ");
+           System.out.println("2-square");
+           System.out.println("3-circle");
+           System.out.println("4-cube");
+           System.out.println("5-cuboid");
+           System.out.println("6-ball");
+           System.out.print ("Please enter the number of which shape you want: ");
+          scan.next(); 
+       }
+       shape = scan.nextInt();
+       while(shape<=0&&shape>=7)
+      {
+         System.out.print("chosse the shape again:  ");
+         while(!scan.hasNextDouble())
+         {
+           System.out.println("Oops error! characters and symbols are not allowed.");
+           System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose  ");
+           System.out.println("1- triangle ");
+           System.out.println("2-square");
+           System.out.println("3-circle");
+           System.out.println("4-cube");
+           System.out.println("5-cuboid");
+           System.out.println("6-ball");
+           System.out.print ("Please enter the number of which shape you want: ");
+             scan.next();
+         }
+       
+         shape=scan.nextInt();
+         
+     }
+         switch(shape)
+         {
+             case 1: { Triangle(); } break;
+             case 2: {Square (); }  break;
+             case 3: { Circle(); }  break;
+             case 4: {cube();}     break;
+             case 5: {cuboid();}   break;
+             case 6: {ball();}  break;
+         }
+   
+          System.out.println("\n* TO another opration press eny number \n* TO EXIT press 0 ");
+    while(v==1)
+    {
+           int x;
+           
+                  if(!scan.hasNextInt())
+                  {
+                      System.out.println("Oops error! ,characters and symbols are not allowed  \n* TO another opration press eny number \n* TO EXIT press 0");
+                      scan.next();
+                  }
+           
+                    x=scan.nextInt();
+                  if(x==0)
+                  {
+                      i=0;
+                      v=0;
+                  }
+                  else
+                  {
+                      i=1;
+                         break;
+                  } 
+    }
+    }while(i==1);
+    }
+      public static void Triangle()
+   {
+     double area,perimeter; 
+     int p;
+     Scanner scan = new Scanner (System.in);
+     System.out.println("You can choose either " );
+     System.out.println("1-area");
+     System.out.println("2-perimeter");
+     System.out.print ("Please enter the number of which process you want: ");
+     while(!scan.hasNextDouble())
+     {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+     }
+          p=scan.nextInt();
+     while(p<=0&&p>2)
+     {
+         System.out.print("chosse the procss again:  ");
+         while(!scan.hasNextDouble())
+     {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+     }
+         p=scan.nextInt();
+     }
+      switch(p)
+      {
+         
+          case 1:
+              double base,height;
+              System.out.println("What is the Length of base of the triangle: ");
+           while(!scan.hasNextDouble())
+          {
+               System.out.println("Oops error! characters and symbols are not allowed. What is the Length of base of the triangle again:  ");
+               scan.next();
+          }
+             base = scan.nextDouble();
+             System.out.println("What is the height of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {      
+             System.out.println("Oops error! characters and symbols are not allowed.What is the height of the triangle again: ");
+             scan.next();
+          }
+           height=scan.nextDouble();
+           area=(base*height)/2;
+           System.out.println("the area of triangle:   "+area);
+           break;
+          case 2:
+             double rib1,rib2,rib3;
+             System.out.println("What is the first rib of the triangle: ");
+           while(!scan.hasNextDouble())
+          {
+             System.out.println("Oops error! characters and symbols are not allowed. What is the first rib of the triangle again:  ");
+             scan.next();
+          }
+             rib1 = scan.nextDouble();
+             System.out.println("What is the second rib of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {      
+             System.out.println("Oops error! characters and symbols are not allowed.What is the second of the triangle again: ");
+             scan.next();
+          }
+             rib2=scan.nextDouble();
+             System.out.println("What is the third rib of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {      
+             System.out.println("Oops error! characters and symbols are not allowed.What is the thrid of the triangle again: ");
+             scan.next();
+          }
+             rib3=scan.nextDouble();
+             perimeter=rib1+rib2+rib3;
+             System.out.println("the perimeter of triangle:   "+ perimeter);
+             break;  
+      }
+ }
+     public static void Square()
+   {
+          int p;
+         double area,perimeter,rib;      
+         Scanner scan = new Scanner (System.in);
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         while(!scan.hasNextDouble())
+      {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+      }
+          p=scan.nextInt();
+       while(p<=0&&p>2)
+     {
+         System.out.print("chosse the procss again:  ");
+         while(!scan.hasNextDouble())
+     {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+     }
+         p=scan.nextInt();
+     }
+         switch(p)
+      {
+             case 1:    
+           System.out.println("What is the rib of the Square : ");     
+           while(!scan.hasNextDouble())
+          {      
+          System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+           scan.next();
+          }
+           rib=scan.nextDouble();
+           area=rib*rib;
+           System.out.println("the area of Square :   "+area);
+            break;
+             case 2:
+              System.out.println("What is the rib of the Square : ");     
+           while(!scan.hasNextDouble())
+          {      
+          System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+           scan.next();
+          }
+           rib=scan.nextInt();
+           perimeter=rib*4;
+           System.out.println("the perimeter of Square :   "+perimeter);
+            break;      
+      }     
+    }
+    public static void Circle() 
+    {
+         int p;
+          double radius,area,perimeter;      
+          Scanner scan = new Scanner (System.in);
+         System.out.println("You can choose either area(1) or perimeter (2) " );
+         System.out.print ("Please enter the number of which process you want: ");
+         while(!scan.hasNextDouble())
+      {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either area(1) or perimeter (2) " );
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+      }
+          p=scan.nextInt();
+      while(p<=0&&p>2)
+     {
+         System.out.print("chosse the procss again:  ");
+         while(!scan.hasNextDouble())
+     {
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+     }
+         p=scan.nextInt();
+     }
+                 switch(p)
+      {
+             case 1:    
+           System.out.println("What is the radius of the Circle : ");     
+           while(!scan.hasNextDouble())
+          {      
+          System.out.println("Oops error! characters and symbols are not allowed. What is the radius of the Circle again: ");
+           scan.next();
+          }
+           radius=scan.nextDouble();
+           area=Math.PI*Math.pow(radius, 2);
+           System.out.println("the area of Circle :   "+area);
+            break;
+             case 2:
+              System.out.println("What is the radius of the Circle : ");     
+           while(!scan.hasNextDouble())
+          {      
+          System.out.println("Oops error! characters and symbols are not allowed.What is the radius of the Circle again: ");
+           scan.next();
+          }
+           radius=scan.nextDouble();
+           perimeter=2*radius*Math.PI;
+           System.out.println("the perimeter of Circle :   "+perimeter);
+            break;        
+      }
+    }
+        public static void cube()
+        {
+              double volume,rib;
+           Scanner scan = new Scanner (System.in);
+           System.out.println("What is the rib of the cube: ");     
+           while(!scan.hasNextDouble())
+          {      
+            System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+            scan.next();
+          }
+           rib=scan.nextInt();
+           volume=Math.pow(rib, 3);
+           System.out.println("the volume of Cube :   "+volume);
+
+        }  
+         public static void cuboid()
+        {
+              double volume,lenght,width,height;
+           Scanner scan = new Scanner (System.in);
+           System.out.println("What is the length of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {      
+            System.out.println("Oops error! characters and symbols are not allowed.What is the length of the cubiod again: ");
+            scan.next();
+          }
+           lenght=scan.nextInt();
+            System.out.println("What is the width of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {      
+            System.out.println("Oops error! characters and symbols are not allowed.What is the width of the cubiod again: ");
+            scan.next();
+          }
+            width=scan.nextInt();
+            System.out.println("What is the height of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {      
+            System.out.println("Oops error! characters and symbols are not allowed.What is the height  of the cubiod again: ");
+            scan.next();
+          }
+           height=scan.nextInt();
+           volume=lenght*width*height;
+           System.out.println("the volume of Cube :   "+volume);
+
+        } 
+        public static void ball()
+        {
+              double volume,radius;
+           Scanner scan = new Scanner (System.in);  
+           System.out.println("What is the radius of the ball : ");     
+           while(!scan.hasNextDouble())
+          {      
+             System.out.println("Oops error! characters and symbols are not allowed. What is the radius of the ball again: ");
+             scan.next();
+          }        
+           radius=scan.nextInt();
+           volume=(4*Math.PI*Math.pow(radius, 3))/3;
+           System.out.println("the volume of ball :   "+volume);
+        
+        }  
+}

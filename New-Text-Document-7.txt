@@ -1,0 +1,67 @@
+// »—‰«„Ã ÃœÊ· «·÷—»
+package table1;
+//import java.util.Scanner;
+public class Table1 
+{
+    public static void main(String[] args) 
+    {
+        int n=10,i,j,v=1;
+     /*   String z="yes";  
+        Scanner in = new Scanner(System.in);
+    do  
+    {
+         System.out.print("Enter the number of rows and columns of matrix:    ");
+         while(!in.hasNextDouble())
+        {
+          System.out.print("Error characters and symbols are not allowed.Enter the number of rows and columns of matrix:    ");
+          in.next();
+        }
+         n  = in.nextInt();*/
+          int a[][] = new int[n][n];
+          for (i = 1; i <= n; i++)
+              System.out.print("\t" + i);
+             System.out.println(); 
+         for ( i = 0; i < 100; i++)
+               System.out.print("-");
+            System.out.println(); 
+           for ( i = 1; i <= n; i++) 
+           {
+               System.out.print(i + "|");
+               for( j = 1; j <= n; j++)
+               {
+                       System.out.print("\t");
+                     if (j >= i)
+                     {
+                         a[i-1][j-1]=i*j;
+                         System.out.print(i+"*"+j+"="+a[i-1][j-1]);
+                     }
+               }
+                
+                System.out.println();
+           }
+       /*          System.out.println("\n* TO another process press any letter \n* TO EXIT press nO ");
+    while(v==1)
+    {
+           String x;
+                  while(in.hasNextInt())
+                  {
+                      System.out.println("Error! ,numbers are not allowed  \n* TO another process write yes \n* TO EXIT write no");
+                      in.next();
+                  }
+           
+                    x=in.next();
+                  if("no".equalsIgnoreCase(x))
+                  {
+                     z="no";
+                      v=0;
+                  }
+                  else
+                  {
+                      z="yes";
+                      break;
+                      
+                  } 
+    }
+  }while("yes".equalsIgnoreCase(z));*/
+  }
+}

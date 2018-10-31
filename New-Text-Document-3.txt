@@ -1,0 +1,50 @@
+// »—‰«„Ã «·«Ê· ﬁ”„Â —ﬁ„Ì‰ 
+package p3;
+
+import java.util.Scanner;
+
+
+public class P3 {
+
+    
+    public static void main(String[] args) 
+    {
+         boolean continueLoop = true; 
+        do
+       {
+           
+		try
+		{
+			// declare and initialize here.
+			double a,b,c;
+                    
+			Scanner KB=new Scanner(System.in);
+			
+			// input numbers here.
+			System.out.print("Enter first number : ");
+			a=KB.nextDouble();
+                        
+			System.out.print("Enter second number : ");
+			b=KB.nextDouble();
+                       if(b==0)
+                       {
+                           System.out.print("Enter second number : ");
+			   b=KB.nextDouble();
+                       }
+			//throw to catch
+			 c=(a/b);
+                        
+			System.out.println("Result:"+c);
+                       continueLoop = false; 
+		}
+                catch(Exception e)
+                {
+                    //System.err.printf( "\nException: %s\n", e );
+                    System.out.println("You canot do that . Please try again.\n" );
+                }
+                       
+        
+    }while( continueLoop );
+                   
+    } 
+}

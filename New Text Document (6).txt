@@ -1,0 +1,132 @@
+// »—‰«„Ã «·„÷—Ê» 
+package factorial;
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Factorial {
+    public static void main(String[] args) 
+    {
+        String y="yes";
+        String d="yes";
+        Scanner input= new Scanner(System.in);  
+         int n,z=1,v=1;        
+       NumberFormat nf =NumberFormat.getInstance(Locale.US);
+  do
+    {
+      do
+      { 
+              System.out.print("Enter the factorial: ");
+        while(!input.hasNextInt())          
+        {         
+              System.out.println("-----------------------------------------------------------------"); 
+              System.out.print("Error characters and symbols and negative numbers are not allowed."
+              +"Enter the factorial:    ");
+              input.next();         
+        }
+         n  = input.nextInt();
+        if(n<0)
+        {
+              System.out.println("-----------------------------------------------------------------"); 
+              System.out.print("Error negative numbers are not allowed.");
+              z=1;  
+        }       
+        else 
+              z=0;           
+    }while(z==1); 
+      System.out.println("-----------------------------------------------------------------"); 
+          BigInteger factorial = BigInteger.ONE;
+     for(int i=2;i<=n;i++)
+    {
+             factorial = factorial.multiply(BigInteger.valueOf(i));     
+    }
+         System.out.println("factorial of "+n+"= "+nf.format(factorial)); 
+   System.out.println("-----------------------------------------------------------------"); 
+     do
+     {
+         System.out.print("\n*  if want to appear the way to calculate factorial "
+              + "plz Enter yes \n* TO EXIT Press Enter no: ");   
+          String s;
+          while(input.hasNextDouble())
+         {
+          System.out.println("-----------------------------------------------------------------"); 
+           System.out.print("Error! ,numbers are not allowed  "+ 
+                   "\n*  if want to appear the way to calculate factorial "
+                   + "plz Enter yes \n* TO EXIT plz Enter no :  ");
+           input.next();
+        }
+          s=input.next();
+ System.out.println("-----------------------------------------------------------------"); 
+           if("no".equalsIgnoreCase(s))
+           {
+               d="no";
+               break;
+           }
+           else if("yes".equalsIgnoreCase(s))
+           {
+              System.out.print("factorial of "+n+"=");
+//«·«÷«›Â „‰ «Ê· Â‰«
+                if(n==0)
+              {
+                         System.out.print("("+1+"!"+")/"+1);
+              }
+              else
+              {
+                 for(int i=1;i<=n;i++)
+                {
+                     if(i==n)
+                   {                        
+                        System.out.println(i);
+                   }
+                  else
+                       System.out.println(i+"*");
+                }  
+              }      
+                  break;
+                } 
+                  else
+                  {
+                      System.out.println("Error!.");
+                  }
+    } while("yes".equalsIgnoreCase(d)) ;
+     System.out.println("-----------------------------------------------------------------"); 
+     System.out.println("\n* TO Another Process Press Enter yes"
+             + " \n* TO EXIT Press Enter no ");
+    while(v==1)
+    {
+           String x;
+                  while(input.hasNextDouble())
+                  {
+                      System.out.println("-----------------------------------------------------------------"); 
+                      System.out.println("Error! ,numbers are not allowed "
+                              + " "+ "\n* TO another process  Press Enter yes "
+                              + "\n* TO EXIT Press Enter no");                     
+                      input.next();
+                  }
+                    x=input.next();
+                  if("no".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                       v=0;
+                  }
+                  else if("yes".equalsIgnoreCase(x))
+                  {
+                      y="yes";
+                       break;
+                         
+                 } 
+                 else
+                  {
+                    System.out.println("-----------------------------------------------------------------"); 
+                    System.out.println(" Press Enter yes \n* TO EXIT Press Enter no ");
+                   
+                 }
+                  
+    }      
+    } while("yes".equalsIgnoreCase(y)) ; 
+  System.out.println("-----------------------------------------------------------------"); 
+    }
+
+  
+}
+  
