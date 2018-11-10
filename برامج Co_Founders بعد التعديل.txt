@@ -1,0 +1,1021 @@
+// program 1        division two numbers 
+package p2;
+import java.util.Scanner;
+public class P2 {
+         public static void repeat(int s){
+           Scanner input = new Scanner(System.in);
+           int v=1;
+        if(s>=5){
+            while(v==1)
+            {
+               String y;
+              System.out.println("\n-----------------------------------------------------------------");
+              System.out.println();
+                    System.out.print("TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0 : ");
+                    while(!input.hasNext())
+                          { 
+             System.out.println("-----------------------------------------------------------------"); 
+                              System.out.print("Error!\n* TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0");   
+                              input.next();
+                          }
+                      y=input.next();
+             if("no".equalsIgnoreCase(y)||"n".equalsIgnoreCase(y)||"0".equalsIgnoreCase(y))
+                 System.exit(0);
+             else if("yes".equalsIgnoreCase(y)||"y".equalsIgnoreCase(y)||"1".equalsIgnoreCase(y)) 
+             {
+                 v=0;
+             }
+            }
+         }
+     }
+    public static void main(String[] args) {
+        String y="yes";
+        int v=1,e=1;
+        double a,b,c;
+    	Scanner KB=new Scanner(System.in);
+ do
+ {	
+                         repeat(e);    
+System.out.println("-----------------------------------------------------------------"); 
+			System.out.print("Enter first number : ");
+                        while(!KB.hasNextDouble())
+                        {
+                                 repeat(e);
+System.out.println("-----------------------------------------------------------------"); 
+                             System.out.print("You must enter number. Please try again."
+                                     + "Enter first number : " );
+                             KB.next();
+                             e++;
+                        }
+			a=KB.nextDouble();
+                        e=1;
+System.out.println("-----------------------------------------------------------------"); 
+			System.out.print("Enter second number : ");   
+                           while(!KB.hasNextDouble())
+                        {
+                                 repeat(e);
+System.out.println("-----------------------------------------------------------------"); 
+                             System.out.print("You must enter number. Please try again."
+                                     + "Enter second number : " );
+                             KB.next();
+                             e++;
+                        }
+			b=KB.nextDouble();  
+                        e=1;
+                       while(b==0)
+                       {
+                                repeat(e);
+System.out.println("-----------------------------------------------------------------"); 
+                           System.out.print("Error!!.you cannot division on zero.Please try again. "
+                                   + " Enter second number : ");
+			   b=KB.nextDouble();
+                           e++;
+                       }
+                            c=(a/b);
+ System.out.println("-----------------------------------------------------------------"); 
+                 System.out.println("Result= "+c);
+                       
+                                    
+     System.out.println("-----------------------------------------------------------------"); 
+     System.out.print("\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");  
+     e=1;
+    while(v==1)
+    {
+           String x;
+                   repeat(e);    
+                  while(!KB.hasNext())
+                  {                
+                       repeat(e);
+                      System.out.println("-----------------------------------------------------------------"); 
+                      System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");                     
+                      KB.next();  
+                  }
+                    x=KB.next();
+                  if("no".equalsIgnoreCase(x)||"n".equalsIgnoreCase(x)||"0".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                       v=0;
+                  }
+                  else if("yes".equalsIgnoreCase(x)||"y".equalsIgnoreCase(x)||"1".equalsIgnoreCase(x))
+                  {
+                      y="yes";
+                       break;
+                         
+                 } 
+                 else
+                  {
+                     e++;
+                     if(e>=5)
+                     {
+                       System.out.println("-----------------------------------------------------------------"); 
+                     }
+                     else
+                     {
+                    System.out.println("-----------------------------------------------------------------"); 
+                    System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                                     + "\n* TO EXIT plz Enter No or n or 0: "); 
+                    }
+                   
+                 }
+                  
+                
+    }      
+    } while("yes".equalsIgnoreCase(y)) ; 
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+// program 2  shapes
+package p6;
+import java.util.Scanner;
+public class P6 
+{
+    public static void repeat(int s)
+    {
+           Scanner input = new Scanner(System.in);
+           int v=1;
+        if(s>=5)
+        {
+            while(v==1)
+            {
+               String y;
+              System.out.println("-----------------------------------------------------------------"); 
+              System.out.println(); 
+                    System.out.print("TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0 : ");
+                    while(!input.hasNext())
+                          { 
+             System.out.println("-----------------------------------------------------------------"); 
+                              System.out.print("Error!\n* TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0");   
+                              input.next();
+                          }
+                y=input.next();
+             if("no".equalsIgnoreCase(y)||"n".equalsIgnoreCase(y)||"0".equalsIgnoreCase(y))
+                 System.exit(0);
+             else if("yes".equalsIgnoreCase(y)||"y".equalsIgnoreCase(y)||"1".equalsIgnoreCase(y)) 
+             {
+                 v=0;
+             }
+            }
+         }
+     }
+
+    public static void main(String[] args)
+   {
+       int shape,v=1,b=1;
+       String y="yes";
+     Scanner scan = new Scanner (System.in);
+    do
+    {    
+        repeat(b);
+       System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose  ");
+       System.out.println("1- triangle ");
+       System.out.println("2-square");
+       System.out.println("3-circle");
+       System.out.println("4-cube");
+       System.out.println("5-cuboid");
+       System.out.println("6-ball");
+       System.out.print ("Please enter the number of which shape you want: ");
+       while(!scan.hasNextDouble())
+       {
+                   repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("Oops error! characters and symbols are not allowed.");
+           System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose 1 to 6   ");
+           System.out.println("1- triangle ");
+           System.out.println("2-square");
+           System.out.println("3-circle");
+           System.out.println("4-cube");
+           System.out.println("5-cuboid");
+           System.out.println("6-ball");
+           System.out.print ("Please enter the number of which shape you want: ");
+          scan.next(); 
+          b++;
+       }
+       shape = scan.nextInt();
+       b=1;
+       while(shape<=0||shape>=7)
+      {
+                       repeat(b); 
+System.out.println("-----------------------------------------------------------------"); 
+         System.out.print("chosse the shape again:  ");
+         while(!scan.hasNextDouble())
+         {
+                            repeat(b);
+System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("Oops error! characters and symbols are not allowed.");
+           System.out.println ("This program can caluculate the area and the perimeter and the  volume of 6 shapes You can choose  ");
+           System.out.println("1- triangle ");
+           System.out.println("2-square");
+           System.out.println("3-circle");
+           System.out.println("4-cube");
+           System.out.println("5-cuboid");
+           System.out.println("6-ball");
+           System.out.print ("Please enter the number of which shape you want: ");
+             scan.next();
+             b++;
+            
+         }
+         shape=scan.nextInt();
+      }
+         switch(shape)
+         {
+             case 1: { Triangle(); } break;
+             case 2: {Square (); }  break;
+             case 3: { Circle(); }  break;
+             case 4: {cube();}     break;
+             case 5: {cuboid();}   break;
+             case 6: {ball();}  break;
+         }
+   
+     System.out.println("-----------------------------------------------------------------"); 
+     System.out.print("\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");
+     b=1;
+    while(v==1)
+    {
+               repeat(b);
+           String x;
+                  while(!scan.hasNext())
+                  {                
+                              repeat(b);
+                      System.out.println("-----------------------------------------------------------------"); 
+                      System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");                     
+                      scan.next();
+                    
+                  }
+                    x=scan.next();
+                  if("no".equalsIgnoreCase(x)||"n".equalsIgnoreCase(x)||"0".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                       v=0;
+                  }
+                  else if("yes".equalsIgnoreCase(x)||"y".equalsIgnoreCase(x)||"1".equalsIgnoreCase(x))
+                  {
+                      y="yes";
+                       break;
+                         
+                 } 
+                 else
+                  {
+                     b++;
+                     if(e>=5)
+                     {
+                       System.out.println("-----------------------------------------------------------------"); 
+                     }
+                     else
+                     {
+                    System.out.println("-----------------------------------------------------------------"); 
+                    System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                                     + "\n* TO EXIT plz Enter No or n or 0: "); 
+                    }
+                   
+                 }
+                
+    }      
+    } while("yes".equalsIgnoreCase(y)) ; 
+  System.out.println("-----------------------------------------------------------------"); 
+    }
+      public static void Triangle()
+   {
+     double area,perimeter; 
+     int p,b=1;
+     Scanner scan = new Scanner (System.in);
+      repeat(b);
+     System.out.println("-----------------------------------------------------------------"); 
+     System.out.println("You can choose either " );
+     System.out.println("1-area");
+     System.out.println("2-perimeter");
+     System.out.print ("Please enter the number of which process you want: ");
+     while(!scan.hasNextDouble())
+     {
+           repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+     }
+          p=scan.nextInt();   
+       b=1;
+   System.out.println("-----------------------------------------------------------------"); 
+     while(p<=0||p>2)
+     {
+                                       repeat(b);
+         System.out.print("chosse the procss again:  ");
+                 b++;
+         while(!scan.hasNextDouble())
+     {
+                                       repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+     }
+         p=scan.nextInt();
+     }
+  System.out.println("-----------------------------------------------------------------"); 
+      switch(p)
+      {
+         
+          case 1:
+              double base,height;
+              b=1;
+                                 repeat(b);
+           System.out.println("What is the Length of base of the triangle: ");
+           while(!scan.hasNextDouble())
+          {
+                                            repeat(b);
+               System.out.println("-----------------------------------------------------------------"); 
+               System.out.println("Oops error! characters and symbols are not allowed. What is the Length of base of the triangle again:  ");
+               scan.next();
+               b++;
+          }
+             base = scan.nextDouble();
+           b=1;
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("What is the height of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {              
+              repeat(b); 
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed.What is the height of the triangle again: ");
+             scan.next();
+             b++;
+          }
+           height=scan.nextDouble();
+           area=(base*height)/2;
+             System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("the area of triangle:   "+area);
+           break;
+          case 2:
+             double rib1,rib2,rib3;
+             b=1;
+                                           repeat(b);
+             System.out.println("What is the first rib of the triangle: ");
+           while(!scan.hasNextDouble())
+          {
+                                            repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed. What is the first rib of the triangle again:  ");
+             scan.next();
+             b++;
+          }
+             rib1 = scan.nextDouble();
+             b=1;
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("What is the second rib of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {      
+                                            repeat(b);
+               System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed.What is the second of the triangle again: ");
+             scan.next();
+             b++;
+          }
+             rib2=scan.nextDouble();
+           b=1;
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("What is the third rib of the triangle: ");     
+           while(!scan.hasNextDouble())
+          {    
+                                            repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed.What is the thrid of the triangle again: ");
+             scan.next();
+             b++;
+          }
+             rib3=scan.nextDouble();
+             perimeter=rib1+rib2+rib3;
+               System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("the perimeter of triangle:   "+ perimeter);
+             break;  
+      }
+ }
+     public static void Square()
+   {
+          int p,b=1;
+         double area,perimeter,rib;      
+         Scanner scan = new Scanner (System.in);
+                                                      repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         while(!scan.hasNextDouble())
+      {
+                                           repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+      }
+          p=scan.nextInt();
+          b=1;
+       while(p<=0||p>2)
+     {
+                                          repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.print("chosse the procss again:  ");
+         b++;
+         while(!scan.hasNextDouble())
+     {
+                                          repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+     }
+         p=scan.nextInt();
+     }
+       b=1;
+         switch(p)
+      {
+             case 1:  
+                                                  repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("What is the rib of the Square : ");     
+           while(!scan.hasNextDouble())
+          {      
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+            scan.next();
+            b++;
+          }
+           rib=scan.nextDouble();
+           area=rib*rib;
+           System.out.println("the area of Square :   "+area);
+            break;
+             case 2:
+                 b=1;
+                                                  repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("What is the rib of the Square : ");     
+           while(!scan.hasNextDouble())
+          {   
+                                               repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+             scan.next();
+             b++;
+          }
+           rib=scan.nextInt();
+           perimeter=rib*4;
+           System.out.println("the perimeter of Square :   "+perimeter);
+            break;      
+      }     
+    }
+    public static void Circle() 
+    {
+         int p,b=1;
+          double radius,area,perimeter;      
+          Scanner scan = new Scanner (System.in);
+                                           repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("You can choose either area(1) or perimeter (2) " );
+         System.out.print ("Please enter the number of which process you want: ");
+         while(!scan.hasNextDouble())
+      {
+                                           repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either area(1) or perimeter (2) " );
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+      }
+      p=scan.nextInt();
+      b=1;
+      while(p<=0||p>2)
+     {
+                                          repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.print("chosse the procss again:  ");
+         b++;
+         while(!scan.hasNextDouble())
+     {
+                                          repeat(b);
+         System.out.println("-----------------------------------------------------------------"); 
+         System.out.println("Oops error! characters and symbols are not allowed.");
+         System.out.println("You can choose either " );
+         System.out.println("1-area");
+         System.out.println("2-perimeter");
+         System.out.print ("Please enter the number of which process you want: ");
+         scan.next();
+         b++;
+     }
+         p=scan.nextInt();
+     }
+      b=1;
+                 switch(p)
+      {
+             case 1:   
+                                                  repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("What is the radius of the Circle : ");     
+           while(!scan.hasNextDouble())
+          {  
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed. What is the radius of the Circle again: ");
+            scan.next();
+            b++;
+          }
+           radius=scan.nextDouble();
+           area=Math.PI*Math.pow(radius, 2);
+           System.out.println("the area of Circle :   "+area);
+            break;
+             case 2:
+                 b=1;
+                                                  repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("What is the radius of the Circle : ");     
+           while(!scan.hasNextDouble())
+          {  
+                                               repeat(b);
+              System.out.println("-----------------------------------------------------------------"); 
+              System.out.println("Oops error! characters and symbols are not allowed.What is the radius of the Circle again: ");
+              scan.next();
+              b++;
+          }
+           radius=scan.nextDouble();
+           perimeter=2*radius*Math.PI;
+           System.out.println("the perimeter of Circle :   "+perimeter);
+            break;        
+      }
+    }
+        public static void cube()
+        {
+              double volume,rib;
+              int b=1;
+           Scanner scan = new Scanner (System.in);
+                              repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("What is the rib of the cube: ");     
+           while(!scan.hasNextDouble())
+          {      
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed.What is the rib of the Square again: ");
+            scan.next();
+            b++;
+          }
+           rib=scan.nextInt();
+           volume=Math.pow(rib, 3);
+           System.out.println("the volume of Cube :   "+volume);
+
+        }  
+         public static void cuboid()
+        {
+           double volume,lenght,width,height;
+           int b=1;
+           Scanner scan = new Scanner (System.in);
+                                            repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("What is the length of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed.What is the length of the cubiod again: ");
+            scan.next();
+            b++;
+          }
+           lenght=scan.nextInt();
+           b=1;
+           System.out.println("What is the width of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {      
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed.What is the width of the cubiod again: ");
+            scan.next();
+            b++;
+          }
+            width=scan.nextInt();
+            b=1;
+            System.out.println("What is the height of the cuboid: ");     
+           while(!scan.hasNextDouble())
+          {      
+                                               repeat(b);
+            System.out.println("-----------------------------------------------------------------"); 
+            System.out.println("Oops error! characters and symbols are not allowed.What is the height  of the cubiod again: ");
+            scan.next();
+            b++;
+          }
+           height=scan.nextInt();
+           volume=lenght*width*height;
+           System.out.println("the volume of Cube :   "+volume);
+
+        } 
+        public static void ball()
+        {
+              double volume,radius;
+              int b=1;
+           Scanner scan = new Scanner (System.in);  
+                                            repeat(b);
+           System.out.println("-----------------------------------------------------------------"); 
+           System.out.println("What is the radius of the ball : ");     
+           while(!scan.hasNextDouble())
+          { 
+                                               repeat(b);
+             System.out.println("-----------------------------------------------------------------"); 
+             System.out.println("Oops error! characters and symbols are not allowed. What is the radius of the ball again: ");
+             scan.next();
+             b++;
+          }        
+           radius=scan.nextInt();
+           volume=(4*Math.PI*Math.pow(radius, 3))/3;
+           System.out.println("the volume of ball :   "+volume);
+        
+        }  
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+//program 3  Addition two Arrays
+package table2;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Table2 
+{
+       public static void repeat(int s)
+       {
+           Scanner input = new Scanner(System.in);
+           int v=1;
+        if(s>=5){
+            while(v==1)
+            {
+               String y;
+              System.out.println("\n-----------------------------------------------------------------"); 
+              System.out.println(); 
+                    System.out.print("TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0 : ");
+                    while(!input.hasNext())
+                          { 
+             System.out.println("-----------------------------------------------------------------"); 
+                              System.out.print("Error!\n* TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0");   
+                              input.next();
+                          }
+                y=input.next();
+             if("no".equalsIgnoreCase(y)||"n".equalsIgnoreCase(y)||"0".equalsIgnoreCase(y))
+                 System.exit(0);
+             else if("yes".equalsIgnoreCase(y)||"y".equalsIgnoreCase(y)||"1".equalsIgnoreCase(y)) 
+             {
+                 v=0;
+             }
+            }
+         }
+     }
+    public static void main(String[] args) 
+    {
+                 int n,m,i,j,v=1,e=1;
+             String y="yes";
+         Scanner in = new Scanner(System.in);
+  do
+{ 
+    repeat(e);
+         System.out.print("Enter the number of rows of matrix:    ");
+         while(!in.hasNextDouble())
+        {
+                repeat(e);
+              System.out.print("Error characters and symbols are not allowed.Enter the number of rows of matrix:    ");
+              in.next();
+              e++;
+        }
+         n  = in.nextInt();
+       e=1;
+         System.out.print("Enter the number of columns of matrix:     ");
+        while(!in.hasNextDouble())
+        {
+                repeat(e);
+         System.out.print("Error characters and symbols are not allowed.Enter the number of columns of matrix:     ");
+         in.next();
+         e++;
+        }
+         m = in.nextInt();
+         e=1;
+       System.out.println("--------------------------------------------------------------- ");
+         double a[][] = new double[n][m];
+         double b[][] = new double[n][m];
+         double sum[][] = new double[n][m];
+         for (i = 0; i < n; i++)
+        {
+             for (j = 0; j < m; j++)
+            {
+                    repeat(e);
+                 System.out.print("Enter the elements of "+"a"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :  ");
+                 while(!in.hasNextDouble())
+                {
+                                        repeat(e);
+                     System.out.print("Error characters and symbols are not allowed.Enter the elements of "+"a"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :    ");
+                     in.next();
+                     e++;
+                }
+                     a[i][j] = in.nextDouble();
+            }
+        }
+         e=1;
+            System.out.println("------------------------------------------------------");
+          for (i = 0; i < n; i++)
+        {
+             for (j = 0; j < m; j++)
+            {
+                         repeat(e);
+                System.out.print("Enter the elements of "+"b"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :  ");
+                 while(!in.hasNextDouble())
+                {
+                                        repeat(e);
+                     System.out.print("Error characters and symbols are not allowed.Enter the elements of "+"b"+"["+(i+1)+"]"+"["+(j+1)+"]"+" :   ");
+                     in.next();
+                     e++;
+                }
+                      b[i][j] = in.nextDouble(); 
+                      sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+           System.out.println("--------------------------------------------------------------- ");
+       System.out.print("\n the first array \n"+" "+Arrays.deepToString(a).replace("]", "\n").replace("[", "").replace(",", "")
+      +"the second array \n"+" " +Arrays.deepToString(b).replace("]", "\n").replace("[", "").replace(",", "")
+      +"the sum \n"+" "+Arrays.deepToString(sum).replace("]", "\n").replace("[", "").replace(",", ""));
+   System.out.println("-----------------------------------------------------------------"); 
+     System.out.print("\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");
+     e=1;
+    while(v==1)
+    {
+       
+           String x;
+                     repeat(e);
+                  while(!in.hasNext())
+                  {                
+                       repeat(e);
+                      System.out.println("-----------------------------------------------------------------"); 
+                      System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");                     
+                      in.next();
+                  }
+                    x=in.next();
+                  
+                  if("no".equalsIgnoreCase(x)||"n".equalsIgnoreCase(x)||"0".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                       v=0;
+                  }
+                  else if("yes".equalsIgnoreCase(x)||"y".equalsIgnoreCase(x)||"1".equalsIgnoreCase(x))
+                  {
+                      y="yes";
+                       break;
+                         
+                 } 
+                 else
+                  {
+                      e++;
+                     if(e>=5)
+                     {
+                       System.out.println("-----------------------------------------------------------------"); 
+                     }
+                     else
+                     {
+                    System.out.println("-----------------------------------------------------------------"); 
+                    System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                                     + "\n* TO EXIT plz Enter No or n or 0: "); 
+                    }
+
+                  }
+                
+    }      
+    } while("yes".equalsIgnoreCase(y)) ; 
+  System.out.println("--------------------------------------------------------------------------------");  
+ }    
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+//program 4      Multiplication_tables
+package table1;
+
+public class Table1 
+{
+    public static void main(String[] args) 
+    {
+        int n=10,i,j;
+          int a[][] = new int[n][n];
+          for (i = 1; i <= n; i++)
+          {
+              System.out.print("\t" + i);
+          }
+              System.out.println(); 
+         for ( i = 0; i < 100; i++)
+         {
+               System.out.print("-");
+         }
+               System.out.println(); 
+           for ( i = 1; i <= n; i++) 
+           {
+                System.out.print(i + "|");
+               for( j = 1; j <= n; j++)
+               {
+                       System.out.print("\t");
+                     if (j >= i)
+                     {
+                         a[i-1][j-1]=i*j;
+                         System.out.print(i+"*"+j+"="+a[i-1][j-1]);
+                     }
+               }
+                
+                   System.out.println();
+           }
+    
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+//program 5      factorial
+package factorial;
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Factorial 
+{
+     public static void repeat(int s){
+           Scanner input = new Scanner(System.in);
+           int v=1;
+        if(s>=5){
+            while(v==1)
+            {
+               String y;
+              System.out.println("-----------------------------------------------------------------"); 
+                    System.out.print("TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0 : ");
+                    while(!input.hasNext())
+                          { 
+             System.out.println("-----------------------------------------------------------------"); 
+                              System.out.print("Error!\n* TO continue Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0");   
+                              input.next();
+                          }
+                y=input.next();
+             if("no".equalsIgnoreCase(y)||"n".equalsIgnoreCase(y)||"0".equalsIgnoreCase(y))
+                 System.exit(0);
+             else if("yes".equalsIgnoreCase(y)||"y".equalsIgnoreCase(y)||"1".equalsIgnoreCase(y)) 
+             {
+                 v=0;
+             }
+            }
+         }
+     }
+     public static void main(String[] args) 
+    {
+        String y="yes";
+        String d="yes";
+        Scanner input= new Scanner(System.in);  
+         int n,z=1,v=1,b=1;        
+       NumberFormat nf =NumberFormat.getInstance(Locale.US);
+  do
+    {
+        repeat(b);
+      do
+      { 
+          repeat(b);
+        System.out.print("Enter the factorial number:: ");      
+        while(!input.hasNextInt())          
+        {       
+              repeat(b);
+              System.out.println("-----------------------------------------------------------------"); 
+              System.out.print("Error characters and symbols and negative numbers are not allowed."
+              +"Enter the factorial number:    ");
+              input.next(); 
+              b++;
+        }
+         n  = input.nextInt();
+      b++;          
+    }while(n<0);
+      System.out.println("-----------------------------------------------------------------"); 
+          BigInteger factorial = BigInteger.ONE;
+     for(int i=2;i<=n;i++)
+    {
+             factorial = factorial.multiply(BigInteger.valueOf(i));     
+    }
+         System.out.println("factorial of "+n+"= "+nf.format(factorial)); 
+         b=1; 
+   System.out.println("-----------------------------------------------------------------"); 
+     do
+     {
+        
+           repeat(b);
+         System.out.print("\n*  if want to appear the way to calculate factorial "
+              + "plz Enter yes or y or 1 to continue \n* TO EXIT plz Enter no or n or 0 : ");   
+          String s;
+          while(!input.hasNext())
+         {
+              repeat(b);
+          System.out.println("-----------------------------------------------------------------"); 
+           System.out.print("Error!\n*  if want to appear the way to calculate factorial "
+                   +" plz Enter yes or y or 1 to continue \n* TO EXIT plz Enter no or n or 0 : ");
+           input.next();
+        }
+          s=input.next();
+          b++;
+ System.out.println("-----------------------------------------------------------------"); 
+           if("no".equalsIgnoreCase(s)||"n".equalsIgnoreCase(s)||"0".equalsIgnoreCase(s))
+           {
+               d="no";
+               break;
+           }
+           else if("yes".equalsIgnoreCase(s)||"y".equalsIgnoreCase(s)||"1".equalsIgnoreCase(s))
+           {
+              System.out.print("factorial of "+n+"=");
+                if(n==0)
+              {
+                         System.out.println("("+1+"!"+")/"+1);
+              }
+              else
+              {
+                 for(int i=1;i<=n;i++)
+                {
+                     if(i==n)
+                   {                        
+                        System.out.println(i);
+                   }
+                  else
+                       System.out.print(i+"*");
+                }  
+              }      
+                  break;
+                } 
+           else 
+              System.out.println("Error!! ");
+               
+    } while("yes".equalsIgnoreCase(d)) ;
+     System.out.println("-----------------------------------------------------------------"); 
+     System.out.print("\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");
+    while(v==1)
+    {
+       
+           String x;
+                  while(!input.hasNext())
+                  {                
+                       repeat(b);
+                      System.out.println("-----------------------------------------------------------------"); 
+                      System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                              + "\n* TO EXIT plz Enter No or n or 0: ");                     
+                      input.next();
+                  }
+                    x=input.next();
+                  if("no".equalsIgnoreCase(x)||"n".equalsIgnoreCase(x)||"0".equalsIgnoreCase(x))
+                  {
+                      y="no";
+                       v=0;
+                  }
+                  else if("yes".equalsIgnoreCase(x)||"y".equalsIgnoreCase(x)||"1".equalsIgnoreCase(x))
+                  {
+                      y="yes";
+                       break;
+                         
+                 } 
+                 else
+                  {   
+                     b++;
+                     if(e>=5)
+                     {
+                       System.out.println("-----------------------------------------------------------------"); 
+                     }
+                     else
+                     {
+                    System.out.println("-----------------------------------------------------------------"); 
+                    System.out.print("Error!\n* TO another process  Plz Enter yes or y or 1 "
+                                     + "\n* TO EXIT plz Enter No or n or 0: "); 
+                    }
+                   
+                 }
+                
+    }      
+    } while("yes".equalsIgnoreCase(y)) ; 
+  System.out.println("-----------------------------------------------------------------"); 
+    } 
+}
+  
